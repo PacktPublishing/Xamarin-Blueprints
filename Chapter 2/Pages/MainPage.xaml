@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="SpeechTalk.Pages.MainPage"
+	BackgroundColor="White">
+
+	<ContentPage.Content>
+
+	<Grid x:Name="Grid" RowSpacing="10" Padding="10, 10, 10, 10" VerticalOptions="Center">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<Label x:Name="DesciptionLabel" Text="{Binding DescriptionMessage}" Font="Arial, 20" Grid.Row="0" Grid.Column="0">
+			<Label.TextColor>
+                <OnPlatform x:TypeArguments="Color"
+                    Android="Black"
+                    WinPhone="Black"
+                    iOS="Black">
+                </OnPlatform>
+            </Label.TextColor>
+        </Label> 
+
+		<Entry x:Name="SpeakEntry" Placeholder="{Binding SpeakEntryPlaceholder}" Text="{Binding SpeakText, Mode=TwoWay}" Grid.Row="1" Grid.Column="0">
+			<Entry.BackgroundColor>
+				<OnPlatform x:TypeArguments="Color"
+					Android="White"
+					WinPhone="Silver"
+					iOS="White">
+				</OnPlatform>
+	        </Entry.BackgroundColor>
+        </Entry>
+
+		<Button x:Name="SpeakButton" Text="{Binding SpeakTitle}" Command="{Binding SpeakCommand}" Grid.Row="2" Grid.Column="0">
+			<Button.TextColor>
+                <OnPlatform x:TypeArguments="Color"
+                    Android="Navy"
+                    WinPhone="Blue"
+                    iOS="Navy">
+                </OnPlatform>
+            </Button.TextColor>
+        </Button> 
+	</Grid>
+
+	</ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,10 @@
+﻿<Properties StartupItem="Droid/SpeechTalk.Droid.csproj">
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.SpeechTalk.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A10AC0B6-78D2-48A4-92EF-01D011AFA406" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SpeechTalk.Droid PreferredExecutionTarget="Android.Android-Emulator" />
+</Properties>
