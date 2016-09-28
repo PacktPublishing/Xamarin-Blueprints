@@ -8,19 +8,19 @@ If you are a mobile developer looking to create interesting and fully featured a
 
 ##Software Hardware Requirements:
 
-*Xamarin Studio
+* Xamarin Studio
 To install a copy of Xamarin Studio visit the following link: https://www.xamarin.com/download
 
-*Building Windows Phone Applications
+* Building Windows Phone Applications
 In order to build windows phone applications, you will need a computer with Windows, Microsoft Visual Studio, and the Universal Windows Platform SDK installed.
 
-*Running solutions
+* Running solutions
 You will also need an iOS, android and windows phone device for testing. If you don't have access to devices, you will have to install simulators for each platform.
 
-*iOS
+* iOS
 Simulators can be installed via XCode. If you haven’t got XCode installed, you will need to install a fresh copy.
 
-*Android
+* Android
 Please install a copy of Geny Motion from the link below: https://www.genymotion.com/
 Windows Phone
 The UWP SDK comes with simulators for Microsoft Visual Studio.
