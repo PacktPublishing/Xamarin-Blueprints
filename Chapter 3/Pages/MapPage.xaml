@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+  	xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+	x:Class="Locator.Pages.MapPage"
+	BackgroundColor="White"
+	Title="Map">
+
+	<ContentPage.Content>
+
+		<Grid x:Name="Grid" RowSpacing="10" Padding="10, 10, 10, 10">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="80"/>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="60"/>
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<maps:Map x:Name="MapView" IsShowingUser="true" Grid.Row="0" Grid.Column="0"/>
+
+			<Label x:Name="AddressLabel" Text="{Binding Address}" TextColor="Black" Grid.Row="1" Grid.Column="0"/>
+
+			<Button x:Name="GeolocationButton" Text="{Binding GeolocationButtonTitle}" BackgroundColor="Silver"
+				Command="{Binding GeolocationCommand}" Grid.Row="2" Grid.Column="0">
+				<Button.TextColor>
+					<OnPlatform x:TypeArguments="Color"
+						Android="Navy"
+						WinPhone="Blue"
+						iOS="Black">
+					</OnPlatform>
+				</Button.TextColor>
+			</Button>
+
+			<Button x:Name="NearestAddressButton" Text="Find Nearest Address" BackgroundColor="Silver"
+				Command="{Binding NearestAddressCommand}" Grid.Row="3" Grid.Column="0">
+				<Button.TextColor>
+					<OnPlatform x:TypeArguments="Color"
+						Android="Navy"
+						WinPhone="Blue"
+						iOS="Black">
+					</OnPlatform>
+				</Button.TextColor>
+			</Button>
+    </Grid>
+
+	</ContentPage.Content>
+
+</ContentPage>

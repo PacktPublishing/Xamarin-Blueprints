@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.flusharcade.locator">
+	<uses-sdk android:minSdkVersion="16" />
+	<application android:label="Locator">
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAKTAqzb5k-NPc5IbbZQlfIj9bIAXaAko0" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+	</application>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>

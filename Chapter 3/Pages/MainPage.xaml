@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Locator.Pages.MainPage"
+	BackgroundColor="White"
+	Title="Welcome">
+
+	<ContentPage.Content>
+
+	<Grid x:Name="Grid" RowSpacing="10" Padding="10, 10, 10, 10" VerticalOptions="Center">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<Image x:Name="Image" Source="map.png" HeightRequest="120" WidthRequest="120" 
+				Grid.Row="0" Grid.Column="0"/>
+
+		<Label x:Name="DesciptionLabel" Text="{Binding DescriptionMessage}" HorizontalOptions="Center" Font="Arial, 20" Grid.Row="1" Grid.Column="0">
+			<Label.TextColor>
+                <OnPlatform x:TypeArguments="Color"
+                    Android="Black"
+                    WinPhone="Black"
+                    iOS="Black">
+                </OnPlatform>
+            </Label.TextColor>
+        </Label>
+
+		<Button x:Name="LocationButton" Text="{Binding LocationTitle}" Command="{Binding LocationCommand}" BackgroundColor="Silver" Grid.Row="2" Grid.Column="0">
+			<Button.TextColor>
+                <OnPlatform x:TypeArguments="Color"
+                    Android="Navy"
+                    WinPhone="Blue"
+                    iOS="Black">
+                </OnPlatform>
+            </Button.TextColor>
+        </Button>
+
+		<Button x:Name="ExitButton" Text="{Binding ExitTitle}" Command="{Binding ExitCommand}" BackgroundColor="Silver" Grid.Row="3" Grid.Column="0">
+			<Button.TextColor>
+                <OnPlatform x:TypeArguments="Color"
+                    Android="Navy"
+                    WinPhone="Blue"
+                    iOS="Black">
+                </OnPlatform>
+            </Button.TextColor>
+        </Button> 
+	</Grid>
+
+	</ContentPage.Content>
+
+</ContentPage>
