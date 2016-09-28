@@ -1,0 +1,111 @@
+<Application
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:controls="clr-namespace:Stocklist.XamForms.Controls;assembly=Stocklist.XamForms"
+	xmlns:converters="clr-namespace:Stocklist.XamForms.Converters;assembly=Stocklist.XamForms"
+	xmlns:resx="clr-namespace:Stocklist.Portable.Resources;assembly=Stocklist.Portable"
+	x:Class="Stocklist.XamForms.App">
+	<Application.Resources>
+		<ResourceDictionary>
+			<converters:NotConverter x:Key="notConverter"/>
+			<!-- styles -->
+			<Style x:Key="HomeButtonStyle" TargetType="Button">
+                <Setter Property="TextColor">
+					<Setter.Value>
+		                <OnPlatform x:TypeArguments="Color"
+		                    Android="Navy"
+		                    WinPhone="Blue"
+		                    iOS="Black">
+		                </OnPlatform>
+            		</Setter.Value>
+				</Setter>
+				
+				<Setter Property="BackgroundColor" Value="Silver" />
+            </Style>
+
+			<Style x:Key="TitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+				<Setter Property="FontAttributes" Value="Bold" />
+				<Setter Property="FontFamily" Value="Arial" />
+            </Style>
+
+			<Style x:Key="CustomLabelStyle" TargetType="controls:CustomLabel">
+                <Setter Property="TextColor" Value="Black" />
+				<Setter Property="FontFamily" Value="Gravur-Condensed" />
+				<Setter Property="AndroidFontStyle" Value="GraCoRg_" />
+            </Style>
+			
+			<!-- data templates -->
+			<DataTemplate x:Key="ListItemTemplate">
+				<ViewCell>
+					<StackLayout Margin="20, 15, 20, 5">
+						<Label x:Name="NameLabel" Text="{Binding Name}" Style="{StaticResource TitleStyle}"/>
+						<Label x:Name="CategoryLabel" Text="{Binding Category}"/>
+						<Label x:Name="PriceLabel" Text="{Binding Price}"/>
+					</StackLayout>
+                </ViewCell>
+			</DataTemplate>
+
+			<ControlTemplate x:Key="MainBlackTemplate">
+                <StackLayout x:Name="StackLayout" Spacing="10" Orientation="Vertical" Padding="10, 10, 10, 10" BackgroundColor="Black"
+						VerticalOptions="Center" HorizontalOptions="Center" >
+					<Image x:Name="Image" Source="stocklist.png" HeightRequest="120" WidthRequest="120"/>
+					<Label x:Name="DesciptionLabel">
+						<Label.FormattedText>
+							<FormattedString>
+								<Span Text="{x:Static resx:LabelResources.DecriptionMessage}" 
+									FontFamily="Arial" 
+									FontSize="24"
+									ForegroundColor="White"/>
+							</FormattedString>
+						</Label.FormattedText>
+			        </Label>
+
+					<Button x:Name="StocklistButton" 
+							Text="{x:Static resx:LabelResources.StocklistTitle}" 
+							Command="{TemplateBinding StocklistCommand}"
+							Style="{StaticResource HomeButtonStyle}"
+							BackgroundColor="Gray"
+							TextColor="White"/>
+
+					<Button x:Name="ExitButton" 
+							Text="{x:Static resx:LabelResources.ExitTitle}" 
+							Command="{TemplateBinding ExitCommand}" 
+							Style="{StaticResource HomeButtonStyle}"
+							BackgroundColor="Gray"
+							TextColor="White"/>
+
+					<ContentPresenter />
+				</StackLayout>
+            </ControlTemplate>
+
+			<ControlTemplate x:Key="MainWhiteTemplate">
+                <StackLayout x:Name="StackLayout" Spacing="10" Orientation="Vertical" Padding="10, 10, 10, 10" VerticalOptions="Center" HorizontalOptions="Center" >
+					<Image x:Name="Image" Source="stocklist.png" HeightRequest="120" WidthRequest="120"/>
+					<Label x:Name="DesciptionLabel" >
+						<Label.FormattedText>
+							<FormattedString>
+								<Span Text="{x:Static resx:LabelResources.DecriptionMessage}" 
+									FontFamily="Arial" 
+									FontSize="24"
+									ForegroundColor="Black"/>
+							</FormattedString>
+						</Label.FormattedText>
+			        </Label>
+
+					<Button x:Name="StocklistButton" 
+							Text="{x:Static resx:LabelResources.StocklistTitle}" 
+							Command="{TemplateBinding StocklistCommand}"
+							Style="{StaticResource HomeButtonStyle}"/>
+
+					<Button x:Name="ExitButton" 
+							Text="{x:Static resx:LabelResources.ExitTitle}" 
+							Command="{TemplateBinding ExitCommand}" 
+							Style="{StaticResource HomeButtonStyle}"/>
+
+					<ContentPresenter />
+				</StackLayout>
+            </ControlTemplate>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>	

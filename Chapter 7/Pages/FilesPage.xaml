@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui:ExtendedContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:resx="clr-namespace:FileStorage.Portable.Resources;assembly=FileStorage.Portable"
+	xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+  	xmlns:ui="clr-namespace:FileStorage.UI;assembly=Xamarin.Forms"
+	xmlns:controls="clr-namespace:FileStorage.Controls;assembly=FileStorage"
+	x:Class="FileStorage.Pages.FilesPage"
+	BackgroundColor="White"
+	Title="Files">
+	
+	<ui:ExtendedContentPage.Content>
+		<Grid x:Name="Grid" RowSpacing="10" Padding="10, 10, 10, 10">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="60"/>
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<Label x:Name="NoFilesLabel" IsVisible="{Binding AnyFiles, Converter={StaticResource notConverter}}"
+					HorizontalTextAlignment="Center"
+					VerticalTextAlignment="Center"
+					Grid.Row="0" Grid.Column="0">
+				<Label.FormattedText>
+					<FormattedString>
+						<Span Text="{x:Static resx:LabelResources.NoFilesLabel}" 
+							FontFamily="Arial" 
+							FontSize="24"
+							ForegroundColor="Black"/>
+					</FormattedString>
+				</Label.FormattedText>
+	        </Label>
+
+			<controls:CarouselView x:Name="CarouselView"
+				SelectedCommand="{Binding EditFileCommand}"
+				Grid.Row="0" Grid.Column="0"/>
+			
+			<Button x:Name="CreateFileButton" Command="{Binding CreateFileCommand}" 
+				Text="{x:Static resx:LabelResources.CreateFileLabel}"
+				Style="{StaticResource ButtonStyle}"
+				Grid.Row="1" Grid.Column="0"/>
+		</Grid>
+
+	</ui:ExtendedContentPage.Content>
+</ui:ExtendedContentPage>

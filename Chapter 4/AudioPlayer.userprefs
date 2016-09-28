@@ -1,0 +1,25 @@
+﻿<Properties StartupItem="AudioPlayer.iOS/AudioPlayer.iOS.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AudioPlayer.iOS/Sound/SoundHandler.cs">
+    <Files>
+      <File FileName="AudioPlayer.Droid/Sound/SoundHandler.cs" Line="117" Column="4" />
+      <File FileName="Sound/ISoundHandler.cs" Line="20" Column="12" />
+      <File FileName="ViewModels/AudioPlayerPageViewModel.cs" Line="252" Column="34" />
+      <File FileName="AudioPlayer.Droid/Views/AudioPlayerPage.cs" Line="51" Column="43" />
+      <File FileName="AudioPlayer.Droid/Views/MainPage.cs" Line="21" Column="2" />
+      <File FileName="AudioPlayer.Droid/Controls/CustomSeekBar.cs" Line="67" Column="3" />
+      <File FileName="AudioPlayer.iOS/Sound/SoundHandler.cs" Line="24" Column="94" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AudioPlayer.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.TA38503PQ6" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/AccountRepository/AccountRepository.cs" line="214" offsetX="986" offsetY="3195" expression="this.webServiceUrl.AbsoluteUri" liveUpdate="False" />
+    <Watch file="../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/TargetRangeRepository/TargetRangeRepository.cs" line="107" offsetX="950" offsetY="1590" expression="message.RequestUri" liveUpdate="False" />
+    <Watch file="../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Droid/Bluetooth/BluetoothSocketHandler.cs" line="260" offsetX="322" offsetY="3885" expression="error" liveUpdate="False" />
+    <Watch file="../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/ReminderRepository/ReminderRepository.cs" line="131" offsetX="603" offsetY="1950" expression="t" liveUpdate="False" />
+    <Watch file="../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/ReminderRepository/ReminderRepository.cs" line="115" offsetX="972" offsetY="1710" expression="message.RequestUri" liveUpdate="False" />
+    <Watch file="../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/SettingsRepository/SettingsRepository.cs" line="98" offsetX="676" offsetY="1455" expression="settingsUri" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.AudioPlayer.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A10AC0B6-78D2-48A4-92EF-01D011AFA406" />
+</Properties>

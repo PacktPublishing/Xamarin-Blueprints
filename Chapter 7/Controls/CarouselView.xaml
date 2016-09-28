@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:controls="clr-namespace:FileStorage.Controls;assembly=FileStorage"
+		x:Class="FileStorage.Controls.CarouselView">
+	<ContentView.Content>
+		<Grid x:Name="Container">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<controls:CarouselScroll x:Name="CarouselScroll" 
+				ItemsSource="{Binding Cells}"
+				ItemTemplate="{StaticResource CarouselTemplate}"
+				DataChanges="{Binding DataChanges}"
+				Grid.Row="0" Grid.Column="0"/>
+
+			<controls:GestureView x:Name="GestureView" Grid.Row="0" Grid.Column="0"/>
+        </Grid>
+	</ContentView.Content>
+</ContentView>

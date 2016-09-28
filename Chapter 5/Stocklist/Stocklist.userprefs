@@ -1,0 +1,31 @@
+﻿<Properties StartupItem="iOS/Stocklist.iOS.csproj">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Stocklist" expanded="True">
+            <Node name="Stocklist.Droid" expanded="True" />
+            <Node name="Stocklist.iOS" expanded="True">
+              <Node name="packages.config" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Stocklist.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4D94D0EF-12F5-45B6-83B6-58F50C2938C0" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/AccountRepository/AccountRepository.cs" line="214" offsetX="986" offsetY="3195" expression="this.webServiceUrl.AbsoluteUri" liveUpdate="False" />
+    <Watch file="../../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/TargetRangeRepository/TargetRangeRepository.cs" line="107" offsetX="950" offsetY="1590" expression="message.RequestUri" liveUpdate="False" />
+    <Watch file="../../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Droid/Bluetooth/BluetoothSocketHandler.cs" line="260" offsetX="322" offsetY="3885" expression="error" liveUpdate="False" />
+    <Watch file="../../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/ReminderRepository/ReminderRepository.cs" line="131" offsetX="603" offsetY="1950" expression="t" liveUpdate="False" />
+    <Watch file="../../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/ReminderRepository/ReminderRepository.cs" line="115" offsetX="972" offsetY="1710" expression="message.RequestUri" liveUpdate="False" />
+    <Watch file="../../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/SettingsRepository/SettingsRepository.cs" line="98" offsetX="676" offsetY="1455" expression="settingsUri" liveUpdate="False" />
+    <Watch file="../../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/ViewModels/Controls/GraphViewModel.cs" line="665" offsetX="669" offsetY="9964" expression="this.observationHandler.ObservationMap" liveUpdate="False" />
+    <Watch file="../../../../../../../Development/Telstra/HealthConnex/MyCareManager/RavenClient.Shared/RavenClient.cs" line="275" offsetX="553" offsetY="4110" expression="packet" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:controls="clr-namespace:Stocklist.XamForms.Controls;assembly=Stocklist.XamForms"
+	xmlns:resx="clr-namespace:Stocklist.Portable.Resources;assembly=Stocklist.Portable"
+	x:Class="Stocklist.XamForms.Pages.StockItemDetailsPage"
+  BackgroundColor="White">
+	<ContentPage.Content>
+		<StackLayout Margin="20, 20, 20, 5">
+			<Label x:Name="TitleLabel" >
+				<Label.FormattedText>
+					<FormattedString>
+						<Span Text="{x:Static resx:LabelResources.StockItemDetailsTitle}" 
+							FontFamily="Arial" 
+							FontSize="24">
+							<Span.ForegroundColor>
+				                <OnPlatform x:TypeArguments="Color"
+				                    Android="Black"
+				                    WinPhone="Black"
+				                    iOS="Black">
+				                </OnPlatform>
+			            	</Span.ForegroundColor>
+						</Span>
+					</FormattedString>
+				</Label.FormattedText>
+	        </Label>
+				
+			<Label x:Name="NameLabel" Text="{Binding Name}" Style="{StaticResource TitleStyle}"/>
+			<controls:CustomLabel x:Name="CategoryLabel" Text="{Binding Category}" Style="{StaticResource CustomLabelStyle}"/>
+			<controls:CustomLabel x:Name="PriceLabel" Text="{Binding Price}" Style="{StaticResource CustomLabelStyle}"/>
+
+			<ActivityIndicator x:Name="ActivityIndicator" IsRunning="{Binding InProgress}"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

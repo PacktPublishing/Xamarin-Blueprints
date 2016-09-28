@@ -1,0 +1,51 @@
+﻿<Application
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:controls="clr-namespace:FileStorage.Controls;assembly=FileStorage"
+	xmlns:converters="clr-namespace:FileStorage.Converters;assembly=FileStorage"
+	xmlns:resx="clr-namespace:FileStorage.Portable.Resources;assembly=FileStorage.Portable"
+	x:Class="FileStorage.App">
+	<Application.Resources>
+		<ResourceDictionary>
+			<!-- converters -->
+			<converters:NotConverter x:Key="notConverter"/>
+
+			<!-- data templates for carousel view -->
+			<DataTemplate x:Key="CarouselTemplate">
+				<Grid BackgroundColor="Gray">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="80"/>
+					</Grid.RowDefinitions>
+					
+					<Image x:Name="FileImage" Source="file.png" Grid.RowSpan="2" Aspect="AspectFill"/>
+					
+					<StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
+						<Label TextColor="White" Text="{Binding FileName}" 
+							FontSize="16" 
+							HorizontalOptions="Center" 
+							VerticalOptions="CenterAndExpand"/>
+					</StackLayout>
+				</Grid>
+			</DataTemplate>
+
+			<!-- styles -->
+			<Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="TextColor">
+					<Setter.Value>
+		                <OnPlatform x:TypeArguments="Color"
+		                    Android="Navy"
+		                    WinPhone="Black"
+		                    iOS="Black">
+		                </OnPlatform>
+            		</Setter.Value>
+				</Setter>
+				<Setter Property="FontSize" Value="20" />
+				<Setter Property="FontFamily" Value="Arial" />
+				<Setter Property="BackgroundColor" Value="Silver" />
+            </Style>
+
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>	

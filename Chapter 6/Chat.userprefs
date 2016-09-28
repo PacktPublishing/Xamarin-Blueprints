@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Chat.Droid/Chat.Droid.csproj">
+  <MonoDevelop.Ide.ItemProperties.Chat.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.58.101:5555" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Chat.iOS/Views/LoginViewController.cs">
+    <Files>
+      <File FileName="Chat.Common/Presenter/BasePresenter.cs" Line="1" Column="1" />
+      <File FileName="Chat.iOS/Views/LoginViewController.cs" Line="190" Column="26" />
+      <File FileName="Chat.Common/Presenter/LoginPresenter.cs" Line="79" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.Chat.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4D94D0EF-12F5-45B6-83B6-58F50C2938C0" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

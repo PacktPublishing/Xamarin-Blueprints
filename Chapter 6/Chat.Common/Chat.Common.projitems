@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{9A6AE8DF-4A45-4CA2-9083-86FD6180BCD4}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Chat.Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Presenter\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Presenter\Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Events\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Presenter\Services\INavigationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Presenter\ClientsListPresenter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Presenter\Services\ApplicationState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\ClientSelectedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Presenter\ChatPresenter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Presenter\IView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Presenter\BasePresenter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\ConnectedClientsUpdatedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\ChatEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Presenter\LoginPresenter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Client.cs" />
+  </ItemGroup>
+</Project>

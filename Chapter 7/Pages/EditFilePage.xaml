@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui:ExtendedContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:resx="clr-namespace:FileStorage.Portable.Resources;assembly=FileStorage.Portable"
+  	xmlns:ui="clr-namespace:FileStorage.UI;assembly=Xamarin.Forms"
+	xmlns:beh="clr-namespace:FileStorage.Behaviours;assembly=FileStorage"
+	x:Class="FileStorage.Pages.EditFilePage"
+	BackgroundColor="White"
+	Title="Files">
+	
+	<ui:ExtendedContentPage.Content>
+		<Grid x:Name="Grid" RowSpacing="10" Padding="10, 10, 10, 10">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="60"/>
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<Entry x:Name="FileNameLabel" Text="{Binding FileName, Mode=TwoWay}"
+				BackgroundColor="Silver"
+				Grid.Row="0" Grid.Column="0">
+				<Entry.Behaviors>
+					<beh:LowercaseEntryBehaviour/>			
+				</Entry.Behaviors>
+			</Entry>
+	
+			<Editor x:Name="ContentsEditor" Text="{Binding Contents, Mode=TwoWay}"
+				BackgroundColor="Silver"
+				Grid.Row="1" Grid.Column="0"/>
+
+			<Button x:Name="SaveFileButton" Command="{Binding SaveFileCommand}" 
+				Text="{x:Static resx:LabelResources.SaveFileLabel}" 
+				Style="{StaticResource ButtonStyle}"
+				Grid.Row="2" Grid.Column="0"/>
+
+			<Button x:Name="DeleteFileButton" Command="{Binding DeleteFileCommand}"
+				Text="{x:Static resx:LabelResources.DeleteFileLabel}"
+				Style="{StaticResource ButtonStyle}"
+				Grid.Row="3" Grid.Column="0"/>
+		</Grid>
+	</ui:ExtendedContentPage.Content>
+</ui:ExtendedContentPage>
