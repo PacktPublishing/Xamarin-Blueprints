@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Camera.Controls.LoadingView"
+	xmlns:controls="clr-namespace:Camera.Controls;assembly=LogIt.XamForms"
+	xmlns:converters="clr-namespace:Camera.Converters;assembly=LogIt.XamForms"
+	BackgroundColor="White">
+
+    <Grid x:Name="MainLayout" BackgroundColor="Black">
+        <Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+		
+		<StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" 
+				Grid.Row="0" Grid.Column="0">
+			<ActivityIndicator x:Name="ProgressActivity" Color="White" IsRunning="true"  />
+		    <Label x:Name="LoadingLabel" Text="{Binding LoadingMessage}" TextColor="White"/>
+		</StackLayout>
+    </Grid>
+</ContentView>	

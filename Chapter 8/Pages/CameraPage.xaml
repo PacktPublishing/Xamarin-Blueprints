@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ui:ExtendedContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:controls="clr-namespace:Camera.Controls;assembly=Camera"
+	xmlns:ui="clr-namespace:Camera.UI;assembly=Camera"
+	x:Class="Camera.Pages.CameraPage"
+	BackgroundColor="#F2F2F2">
+
+	<Grid x:Name="MainLayout" BackgroundColor="Black" 
+			RowSpacing="0" ColumnSpacing="0">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="40" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="60" />
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="60"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="100"/>
+		</Grid.ColumnDefinitions>
+
+		<controls:CameraView x:Name="CameraView" BackgroundColor="Black" Grid.Row="0" 
+			Grid.RowSpan="{Binding PageOrientation, Converter={StaticResource orientationToIntConverter}, ConverterParameter='7, 6'}" 
+			Grid.Column="0" Grid.ColumnSpan="{Binding PageOrientation, Converter={StaticResource orientationToIntConverter}, ConverterParameter='5, 6'}"/>
+
+		<controls:FocusView x:Name="FocusView" 
+			Grid.Row="0" 
+			Grid.RowSpan="{Binding PageOrientation, Converter={StaticResource orientationToIntConverter}, ConverterParameter='7, 6'}" 
+			Grid.Column="0" Grid.ColumnSpan="{Binding PageOrientation, Converter={StaticResource orientationToIntConverter}, ConverterParameter='5, 6'}"/>
+
+		<Grid x:Name="CameraButtonContainerPortrait" ColumnSpacing="5" 
+			IsEnabled="{Binding PageOrientation, Converter={StaticResource orientationToBoolConverter}, ConverterParameter='false, true'}}" 
+			Opacity="0" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="35"/>
+				<ColumnDefinition Width="45"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="45"/>
+				<ColumnDefinition Width="35"/>
+			</Grid.ColumnDefinitions>
+
+			<ContentView BackgroundColor="Black" 
+				Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"/>
+
+			<controls:CustomImage x:Name="CameraButtonPortrait" Path="photo_camera_button.png" 
+					TintOn="false" WidthRequest="50" HeightRequest="50" 
+					HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="2">
+				<controls:CustomImage.GestureRecognizers>
+					<TapGestureRecognizer Tapped="HandleShutter"/>
+				</controls:CustomImage.GestureRecognizers>
+			</controls:CustomImage>
+
+			<Label x:Name="FlashLabelPortrait"
+				Text="{Binding IsFlashOn, Converter={StaticResource boolToStringConverter}, ConverterParameter='On, Off'}"
+				TextColor="#0ca6df" XAlign="Start" YAlign="Center" 
+				Grid.Row="0" Grid.Column="1">
+				<Label.GestureRecognizers>
+					<TapGestureRecognizer Tapped="HandleFlash"/>
+				</Label.GestureRecognizers>
+			</Label>
+
+			<controls:CustomImage x:Name="FlashImagePortrait" Path="photo_light.png" 
+					Margin="10, 0, 0, 0" 
+					VerticalOptions="Center"
+					TintOn="false" WidthRequest="20" 
+					HeightRequest="35"
+					Grid.Row="0" Grid.Column="0">
+				<controls:CustomImage.GestureRecognizers>
+					<TapGestureRecognizer Tapped="HandleFlash"/>
+				</controls:CustomImage.GestureRecognizers>
+			</controls:CustomImage>
+		</Grid>
+
+		<controls:LoadingView x:Name="LoadingView" 
+			Grid.Row="0" Grid.RowSpan="7" Grid.Column="0" Grid.ColumnSpan="6"/>
+
+		<Grid x:Name="CameraButtonContainerLandscape" RowSpacing="5" 
+				IsEnabled="{Binding PageOrientation, Converter={StaticResource orientationToBoolConverter}, ConverterParameter='true, false'}}" 
+				Opacity="0" Grid.Row="0" Grid.RowSpan="7" 
+				Grid.Column="{Binding PageOrientation, Converter={StaticResource orientationToIntConverter}, ConverterParameter='5, 4'}">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="45"/>
+				<RowDefinition Height="40"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="40"/>
+				<RowDefinition Height="45"/>
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<ContentView BackgroundColor="Black"
+				Grid.Row="0" Grid.RowSpan="5" Grid.Column="0"/>
+
+			<controls:CustomImage x:Name="CameraButtonLandscape" Path="photo_camera_button.png" 
+					TintOn="false" WidthRequest="50" 
+					HeightRequest="50" 
+					HorizontalOptions="Center" VerticalOptions="Center" 
+					Grid.Row="2" Grid.Column="0">
+				<controls:CustomImage.GestureRecognizers>
+					<TapGestureRecognizer Tapped="HandleShutter"/>
+				</controls:CustomImage.GestureRecognizers>
+			</controls:CustomImage>
+
+			<Label x:Name="FlashLabelLandscape" 
+					Text="{Binding IsFlashOn, Converter={StaticResource boolToStringConverter}, ConverterParameter='On, Off'}" 
+					TextColor="#0ca6df"
+					XAlign="Center" YAlign="Start" Grid.Row="1" Grid.Column="0">
+				<Label.GestureRecognizers>
+					<TapGestureRecognizer Tapped="HandleFlash"/>
+				</Label.GestureRecognizers>
+			</Label>
+
+			<controls:CustomImage x:Name="FlashImageLandscape" Path="photo_light.png"
+					Margin="0, 10, 0, 0" HorizontalOptions="Center" 
+					TintOn="false" WidthRequest="30" 
+					HeightRequest="30"
+					Grid.Row="0" Grid.Column="0">
+				<controls:CustomImage.GestureRecognizers>
+					<TapGestureRecognizer Tapped="HandleFlash"/>
+				</controls:CustomImage.GestureRecognizers>
+			</controls:CustomImage>
+		</Grid>
+
+		<Grid x:Name="PhotoEditLayout" IsEnabled="{Binding PhotoEditOn}" BackgroundColor="White" 
+				Opacity="{Binding PhotoEditOn, Converter={StaticResource boolToPartialConverter}, ConverterParameter='1, 0'}" 
+				RowSpacing="0" Grid.Row="0" Grid.RowSpan="7" Grid.Column="0" Grid.ColumnSpan="6">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="60"/>
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="10"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="10"/>
+			</Grid.ColumnDefinitions>
+
+			<Image x:Name="PhotoToEdit" 
+				Source="{Binding PhotoData, Converter={StaticResource byteArrayToImageSourceConverter}}" 
+				Aspect="AspectFit" 
+				BackgroundColor="White" 
+				IsOpaque="true"
+				Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="5" />
+
+			<BoxView BackgroundColor="Black" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5"/>
+			
+			<controls:CustomImage x:Name="TrashImage" Path="photo_trash.png" 
+					TintColorString="#FFFFFF" TintOn="true" HorizontalOptions="Center" 
+					WidthRequest="40" HeightRequest="40"
+					Grid.Row="1" Grid.Column="1">
+				<controls:CustomImage.GestureRecognizers>
+					<TapGestureRecognizer Tapped="HandleDelete"/>
+				</controls:CustomImage.GestureRecognizers>
+			</controls:CustomImage>
+		</Grid>
+	</Grid>
+</ui:ExtendedContentPage>

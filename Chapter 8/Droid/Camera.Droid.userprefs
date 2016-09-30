@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Camera.Droid.csproj">
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/AccountRepository/AccountRepository.cs" line="214" offsetX="986" offsetY="3195" expression="this.webServiceUrl.AbsoluteUri" liveUpdate="False" />
+    <Watch file="../../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/TargetRangeRepository/TargetRangeRepository.cs" line="107" offsetX="950" offsetY="1590" expression="message.RequestUri" liveUpdate="False" />
+    <Watch file="../../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Droid/Bluetooth/BluetoothSocketHandler.cs" line="260" offsetX="322" offsetY="3885" expression="error" liveUpdate="False" />
+    <Watch file="../../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/ReminderRepository/ReminderRepository.cs" line="131" offsetX="603" offsetY="1950" expression="t" liveUpdate="False" />
+    <Watch file="../../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/ReminderRepository/ReminderRepository.cs" line="115" offsetX="972" offsetY="1710" expression="message.RequestUri" liveUpdate="False" />
+    <Watch file="../../../Desktop/Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/SettingsRepository/SettingsRepository.cs" line="98" offsetX="676" offsetY="1455" expression="settingsUri" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.Camera.Droid PreferredExecutionTarget="Android.192.168.58.101:5555" />
+</Properties>
