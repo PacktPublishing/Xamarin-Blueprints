@@ -30,4 +30,7 @@ The UWP SDK comes with simulators for Microsoft Visual Studio.
 * [Xamarin Essentials](https://www.packtpub.com/application-development/xamarin-essentials?utm_source=Github&utm_medium=repository&utm_campaign=9781783550838)
 * [Xamarin Cross-platform Application Development - Second Edition](https://www.packtpub.com/application-development/xamarin-cross-platform-application-development-second-edition?utm_source=Github&utm_medium=repository&utm_campaign=9781784397883)
 
+###Suggestions and Feedback
+ [Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
+
 
